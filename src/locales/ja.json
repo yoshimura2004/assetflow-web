@@ -1,0 +1,22 @@
+{
+  "translation": {
+    "login_title": "AssetFlow ログイン",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "login_btn": "ログイン",
+    "dashboard_title": "AssetFlow ダッシュボード",
+    "add_asset": "資産追加",
+    "logout": "ログアウト",
+    "total_asset": "総資産 (評価額)",
+    "total_count": "保有銘柄数",
+    "my_asset_list": "資産状況",
+    "chart_title": "ポートフォリオ比率",
+    "asset_name": "銘柄名",
+    "category": "カテゴリ",
+    "quantity": "保有数量",
+    "avg_price": "平均取得単価",
+    "current_price": "現在値 (予想)",
+    "profit_rate": "収益率",
+    "currency_unit": "円"
+  }
+}

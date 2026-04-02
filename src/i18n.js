@@ -1,0 +1,295 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+const resources = {
+  en: {
+    translation: {
+      "login_btn": "Login",
+      "logout": "Logout",
+      "search_placeholder": "Search Symbol or Name...",
+      "total_asset": "Total Assets",
+      "currency_unit": "KRW",
+      "total_count": "Holdings",
+      "add_asset": "Add Asset",
+      "portfolio_ratio": "Portfolio Ratio",
+      
+      "item_unit": "items",
+      "investing_desc": "Investing in various assets.",
+      "data_needed": "Data connection needed",
+      "asset_list_title": "Asset List",
+      "real_time_update": "Updating real-time",
+      "no_data": "No data available.",
+      
+      // [테이블 컬럼]
+      "asset_name": "Name",
+      "category": "Category",
+      "quantity": "Qty",
+      "avg_price": "Avg Price",
+      "current_price": "Cur Price",
+      "profit_rate": "P/L %",
+
+      // [모달창]
+      "modal_title": "Add New Asset",
+      "input_name": "Asset Name",
+      "input_name_placeholder": "e.g. Apple, BTC",
+      "input_category": "Category",
+      "input_quantity": "Quantity",
+      "input_quantity_placeholder": "0",
+      "input_price": "Average Price",
+      "input_price_placeholder": "0",
+      "save_btn": "Save",
+      "cancel_btn": "Cancel",
+      
+      // [카테고리]
+      "cat_stock": "Stock",
+      "cat_crypto": "Crypto",
+      "cat_cash": "Cash",
+      "cat_bond": "Bond",
+
+      "delete_btn": "Delete",
+      "action": "Action",
+      "total_value": "Total Value",
+      "bond_short": "Short-term Treasury (1-3Y)",
+      "bond_mid": "10-Year Treasury (7-10Y)",
+      "bond_long": "Long-term Treasury (20Y+)",
+      "cash_usd": "US Dollar (USD)",
+      "cash_krw": "Korean Won (KRW)",
+      "cash_jpy": "Japanese Yen (JPY)",
+      "input_amount": "Amount",
+      "history_title": "Transaction History",
+      "type_buy": "BUY",
+      "type_sell": "SELL",
+      "trans_date": "Date",
+      "trans_price": "Price",
+      "trans_amount": "Total Amount",
+      "realized_profit": "Realized P/L",
+      "reset_btn": "Reset Data",
+
+      // [트레이딩 룸]
+      "trade_buy": "BUY",
+      "trade_sell": "SELL",
+      "available_cash": "Available Cash",
+      "holding_qty": "Holdings",
+      "avg_price_short": "Avg Price",
+      "input_price": "Price",
+      "input_qty": "Quantity",
+      "est_total": "Total Amount",
+      "est_avg": "Est. Avg Price",
+      "est_profit": "Est. P/L",
+      "order_buy": "Place Buy Order",
+      "order_sell": "Place Sell Order",
+      "msg_no_qty": "Please enter quantity.",
+      "msg_no_price": "Please enter price.",
+      "msg_no_cash": "Insufficient balance.",
+      "msg_no_stock": "Insufficient holdings.",
+      "msg_buy_success": "Buy order executed!",
+      "msg_sell_success": "Sell order executed!",
+      "back_to_dashboard": "Dashboard",
+
+      // [★추가됨] 대시보드 알림 메시지 (영어)
+      "msg_merge_buy": "Buy order executed! (Merged automatically)",
+      "msg_sell_deposit": "Sell complete! {{amount}} USD deposited to Cash.",
+      "msg_delete_confirm": "Are you sure you want to delete this asset?",
+      "msg_reset_confirm": "All assets and history will be deleted. Are you sure?",
+      "msg_reset_done": "Data reset successfully.",
+      "msg_reset_budget": "Initial Budget Setting", // 초기 자금 설정
+      "msg_enter_budget": "Enter starting cash (USD):", // 시작할 금액을 입력하세요 (USD)
+      "go_to_chart": "View Chart", // 차트 보기
+      "chart_btn": "Chart",
+    }
+  },
+  ko: {
+    translation: {
+      "login_btn": "로그인",
+      "logout": "로그아웃",
+      "search_placeholder": "종목명 또는 심볼 검색...",
+      "total_asset": "총 자산 (평가액)",
+      "currency_unit": "원",
+      "total_count": "보유 종목 수",
+      "add_asset": "자산 추가",
+      "portfolio_ratio": "포트폴리오 비중",
+      
+      "item_unit": "종목",
+      "investing_desc": "다양한 자산에 투자 중입니다.",
+      "data_needed": "데이터 연동 필요",
+      "asset_list_title": "보유 자산 목록",
+      "real_time_update": "실시간 업데이트 중",
+      "no_data": "데이터가 없습니다.",
+
+      "asset_name": "종목명",
+      "category": "카테고리",
+      "quantity": "보유수량",
+      "avg_price": "평단가",
+      "current_price": "현재가",
+      "profit_rate": "수익률",
+      "modal_title": "자산 추가하기",
+      "input_name": "종목명",
+      "input_name_placeholder": "예: AAPL, NVDA",
+      "input_category": "카테고리",
+      "input_quantity": "보유 수량",
+      "input_quantity_placeholder": "0",
+      "input_price": "평균 단가 (매수 가격)",
+      "input_price_placeholder": "0",
+      "save_btn": "저장",
+      "cancel_btn": "취소",
+
+      "cat_stock": "주식",
+      "cat_crypto": "암호화폐 (코인)",
+      "cat_cash": "현금 (달러/원화)",
+      "cat_bond": "채권",
+
+      "delete_btn": "삭제",
+      "action": "관리",
+      "total_value": "평가액",
+      "bond_short": "단기 국채 (1~3년)",
+      "bond_mid": "미국채 10년물 (국채의 기준)",
+      "bond_long": "장기 국채 (20년 이상)",
+      "cash_usd": "미국 달러 (USD)",
+      "cash_krw": "대한민국 원화 (KRW)",
+      "cash_jpy": "일본 엔화 (JPY)",
+      "input_amount": "금액 (수량)",
+      "history_title": "투자 거래 내역",
+      "type_buy": "매수",
+      "type_sell": "매도",
+      "trans_date": "거래일시",
+      "trans_price": "체결가",
+      "trans_amount": "거래금액",
+      "realized_profit": "실현손익",
+      "reset_btn": "데이터 초기화",
+
+      "trade_buy": "매수",
+      "trade_sell": "매도",
+      "available_cash": "주문 가능 현금",
+      "holding_qty": "보유 수량",
+      "avg_price_short": "평단가",
+      "input_price": "가격 (Price)",
+      "input_qty": "수량 (Quantity)",
+      "est_total": "총 거래금액",
+      "est_avg": "예상 평단가",
+      "est_profit": "예상 실현손익",
+      "order_buy": "매수 주문",
+      "order_sell": "매도 주문",
+      "msg_no_qty": "수량을 입력하세요.",
+      "msg_no_price": "가격을 입력하세요.",
+      "msg_no_cash": "잔액이 부족합니다.",
+      "msg_no_stock": "보유 수량이 부족합니다.",
+      "msg_buy_success": "매수 체결 완료!",
+      "msg_sell_success": "매도 체결 완료!",
+      "back_to_dashboard": "대쉬보드로",
+
+      // [★추가됨] 대시보드 알림 메시지 (한국어)
+      "msg_merge_buy": "추가 매수 완료! (평단가 자동 조정됨)",
+      "msg_sell_deposit": "매도 완료! {{amount}} USD가 현금으로 입금되었습니다.",
+      "msg_delete_confirm": "정말 이 자산을 목록에서 삭제하시겠습니까?",
+      "msg_reset_confirm": "모든 자산과 거래 내역이 영구 삭제됩니다. 초기화하시겠습니까?",
+      "msg_reset_done": "초기화되었습니다.",
+      "msg_reset_budget": "초기 자금 설정", // 초기 자금 설정
+      "msg_enter_budget": "시작할 예산(USD)을 입력해주세요", // 시작할 금액을 입력하세요 (USD)
+      "go_to_chart": "차트 보러가기", // 차트 보기
+      "chart_btn": "차트",
+    }
+  },
+  ja: {
+    translation: {
+      "login_btn": "ログイン",
+      "logout": "ログアウト",
+      "search_placeholder": "銘柄名またはシンボルを検索...",
+      "total_asset": "総資産 (評価額)",
+      "currency_unit": "ウォン",
+      "total_count": "保有銘柄数",
+      "add_asset": "資産追加",
+      "portfolio_ratio": "ポートフォリオ比率",
+      
+      "item_unit": "銘柄",
+      "investing_desc": "様々な資産に投資中です。",
+      "data_needed": "データ連携が必要",
+      "asset_list_title": "保有資産リスト",
+      "real_time_update": "リアルタイム更新中",
+      "no_data": "データがありません。",
+
+      "asset_name": "銘柄名",
+      "category": "カテゴリ",
+      "quantity": "保有数",
+      "avg_price": "平均取得価額",
+      "current_price": "現在値",
+      "profit_rate": "収益率",
+      "modal_title": "資産を追加",
+      "input_name": "銘柄名",
+      "input_name_placeholder": "例: アップル, NVDA",
+      "input_category": "カテゴリ",
+      "input_quantity": "保有数量",
+      "input_quantity_placeholder": "0",
+      "input_price": "平均取得単価 (購入価格)",
+      "input_price_placeholder": "0",
+      "save_btn": "保存",
+      "cancel_btn": "キャンセル",
+
+      "cat_stock": "株式",
+      "cat_crypto": "暗号資産 (仮想通貨)",
+      "cat_cash": "現金 (日本円/ドル)",
+      "cat_bond": "債券",
+      "cat_realestate": "不動産",
+
+      "delete_btn": "削除",
+      "action": "管理",
+      "total_value": "評価額",
+      "bond_short": "短期米国債 (1-3年)",
+      "bond_mid": "米国債10年物 (指標)",
+      "bond_long": "長期米国債 (20年超)",
+      "cash_usd": "米ドル (USD)",
+      "cash_krw": "韓国ウォン (KRW)",
+      "cash_jpy": "日本円 (JPY)",
+      "input_amount": "金額",
+      "history_title": "取引履歴",
+      "type_buy": "買付",
+      "type_sell": "売却",
+      "trans_date": "取引日時",
+      "trans_price": "約定価格",
+      "trans_amount": "取引金額",
+      "realized_profit": "実現損益",
+      "reset_btn": "データ初期化",
+
+      "trade_buy": "買付",
+      "trade_sell": "売却",
+      "available_cash": "注文可能額",
+      "holding_qty": "保有数量",
+      "avg_price_short": "平均単価",
+      "input_price": "指値 (Price)",
+      "input_qty": "数量 (Quantity)",
+      "est_total": "概算約定代金",
+      "est_avg": "予想平均単価",
+      "est_profit": "実現損益見込",
+      "order_buy": "買い注文",
+      "order_sell": "売り注文",
+      "msg_no_qty": "数量を入力してください。",
+      "msg_no_price": "価格を入力してください。",
+      "msg_no_cash": "残高が不足しています。",
+      "msg_no_stock": "保有数量が不足しています。",
+      "msg_buy_success": "買い注文が約定しました！",
+      "msg_sell_success": "売り注文が約定しました！",
+      "back_to_dashboard": "ダッシュボードへ戻る",
+
+      // [★추가됨] 대시보드 알림 메시지 (일본어)
+      "msg_merge_buy": "追加買付完了！（平均単価が調整されました）",
+      "msg_sell_deposit": "売却完了！ {{amount}} USDが現金として入金されました。",
+      "msg_delete_confirm": "本当にこの資産をリストから削除しますか？",
+      "msg_reset_confirm": "すべての資産と取引履歴が削除されます。本当に初期化しますか？",
+      "msg_reset_done": "初期化されました。",
+      "msg_reset_budget": "初期資金設定", // 초기 자금 설정
+      "msg_enter_budget": "開始資金を入力してください(USD):", // 시작할 금액을 입력하세요 (USD)
+      "go_to_chart": "チャートを見る", // 차트 보기
+      "chart_btn": "チャート",
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: "ko", 
+    fallbackLng: "en",
+    interpolation: { escapeValue: false }
+  });
+
+export default i18n;

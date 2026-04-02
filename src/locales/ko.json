@@ -1,0 +1,22 @@
+{
+  "translation": {
+    "login_title": "AssetFlow 로그인",
+    "email": "이메일",
+    "password": "비밀번호",
+    "login_btn": "로그인하기",
+    "dashboard_title": "AssetFlow 대시보드",
+    "add_asset": "자산 추가",
+    "logout": "로그아웃",
+    "total_asset": "총 자산 (평가액)",
+    "total_count": "총 자산 개수",
+    "my_asset_list": "내 자산 현황",
+    "chart_title": "포트폴리오 비중",
+    "asset_name": "종목명",
+    "category": "카테고리",
+    "quantity": "보유수량",
+    "avg_price": "평단가",
+    "current_price": "현재가 (예상)",
+    "profit_rate": "수익률",
+    "currency_unit": "원"
+  }
+}
