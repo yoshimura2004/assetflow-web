@@ -8,5 +8,5 @@
 * 자산 추가/수정/삭제 및 실현 손익 자동 계산
 
 ## 🛠 Tech Stack
-* **Frontend:** React, Tailwind CSS, i18next
+* **Frontend:** React, Tailwind CSS, i18next.
 * **Communication:** REST API (Spring Boot Backend 연동)
