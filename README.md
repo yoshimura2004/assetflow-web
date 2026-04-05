@@ -5,7 +5,7 @@
 ## 🚀 주요 기능
 * 실시간 주식 데이터 시각화 (TradingView API 활용)
 * 다국어 지원 (한국어, 일본어, 영어) - `i18next` 활용
-* 자산 추가/수정/삭제 및 실현 손익 자동 계산
+* 자산 추가/수정/삭제 및 실현 손익 자동 계산.
 
 ## 🛠 Tech Stack
 * **Frontend:** React, Tailwind CSS, i18next.
