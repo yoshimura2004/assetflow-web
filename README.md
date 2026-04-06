@@ -9,4 +9,4 @@
 
 ## 🛠 Tech Stack
 * **Frontend:** React, Tailwind CSS, i18next.
-* **Communication:** REST API (Spring Boot Backend 연동)
+* **Communication:** REST API (Spring Boot Backend 연동).
